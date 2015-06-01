@@ -5,7 +5,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="JSIL.Meta" />
-    <Reference Include="Proxies.4.0" />
+    <Reference Include="JSIL.Proxies.4.0" />
     <Reference Include="ICSharpCode.Decompiler" />
     <Reference Include="ICSharpCode.NRefactory" />
     <Reference Include="Mono.Cecil" />

@@ -10,7 +10,6 @@
     <Reference Include="Mono.Cecil" />
   </References>
   <Files>
-    <Compile Include="OAuth.cs" />
     <Compile Include="SnippetCompiler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </Files>

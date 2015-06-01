@@ -8,7 +8,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Compiler" />
+    <Reference Include="JSIL.Compiler" />
     <Reference Include="JSIL" />
     <Reference Include="ICSharpCode.Decompiler" />
     <Reference Include="ICSharpCode.NRefactory" />

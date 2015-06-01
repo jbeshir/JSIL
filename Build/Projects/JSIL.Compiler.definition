@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Name="JSIL.Compiler" Path="Compiler" Type="Library">
+<Project Name="JSIL.Compiler" Path="Compiler" Type="App">
   <References>
     <Reference Include="System" />
     <Reference Include="System.Core" />
