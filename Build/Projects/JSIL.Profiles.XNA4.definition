@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Name="JSIL.Profiles.XNA4" Path="Compiler/Profiles/XNA4" Type="Library">
+<Project Name="JSIL.Profiles.XNA4" Path="Compiler/Profiles/XNA4" Type="Library" Platforms="Windows">
   <References>
     <Reference Include="Microsoft.Build" />
     <Reference Include="Microsoft.CSharp" />
