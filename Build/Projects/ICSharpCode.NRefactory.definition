@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ExternalProject Name="ICSharpCode.NRefactory">
+
+  <Project
+    Name="ICSharpCode.NRefactory"
+    Guid="3B2A5653-EC97-4001-BB9B-D90F1AF2C371"
+    Path="Upstream/ILSpy/NRefactory/ICSharpCode.NRefactory/ICSharpCode.NRefactory.csproj" />
+  <Project
+    Name="ICSharpCode.NRefactory"
+    Guid="53DCA265-3C3C-42F9-B647-F72BA678122B"
+    Path="Upstream/ILSpy/NRefactory/ICSharpCode.NRefactory.CSharp/ICSharpCode.NRefactory.CSharp.csproj" />
+  
+</ExternalProject>

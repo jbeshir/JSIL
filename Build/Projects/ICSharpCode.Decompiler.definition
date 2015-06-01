@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ExternalProject Name="ICSharpCode.Decompiler">
+
+  <Project
+    Name="ICSharpCode.Decompiler"
+    Guid="984CC812-9470-4A13-AFF9-CC44068D666C"
+    Path="Upstream/ILSpy/ICSharpCode.Decompiler/ICSharpCode.Decompiler.csproj" />
+  
+</ExternalProject>

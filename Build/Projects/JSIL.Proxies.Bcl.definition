@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="JSIL.Proxies.Bcl" Path="Proxies/BCL" Type="Library">
+  <References>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Meta" />
+  </References>
+  <Files>
+    <Compile Include="JSIL.Async.cs" />
+    <Compile Include="JSIL.Bootstrap.cs" />
+    <Compile Include="JSIL.Bootstrap.DateTime.cs" />
+    <Compile Include="JSIL.Bootstrap.Linq.cs" />
+    <Compile Include="JSIL.Bootstrap.Resources.cs" />
+    <Compile Include="JSIL.Bootstrap.Text.cs" />
+    <Compile Include="JSIL.Core.Reflection.cs" />
+    <Compile Include="JSIL.IO.cs" />
+    <Compile Include="JSIL.Unsafe.cs" />
+    <Compile Include="JSIL.XML.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </Files>
+</Project>

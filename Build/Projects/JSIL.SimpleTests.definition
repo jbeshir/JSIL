@@ -1,73 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2DBBCB24-54AD-4C66-B7D6-911811CEB186}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JSIL.SimpleTests</RootNamespace>
-    <AssemblyName>SimpleTests</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <OutputPath>..\bin\</OutputPath>
-    <PlatformTarget>x86</PlatformTarget>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
-    <RestorePackages>true</RestorePackages>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <DebugSymbols>true</DebugSymbols>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
-    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
-    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <DebugSymbols>true</DebugSymbols>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
-    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
-    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
-    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="FSharp.Compiler.CodeDom, Version=0.9.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\FSharp.Compiler.CodeDom.0.9.1\lib\net40\FSharp.Compiler.CodeDom.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\Upstream\nunit.framework.dll</HintPath>
-    </Reference>
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="JSIL.SimpleTests" Path="Tests" Type="Library">
+  <References>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
+    <Reference Include="nunit.framework" />
+    <Reference Include="JSIL" />
+    <Reference Include="JSIL.Meta" />
+    <Reference Include="JSIL.Proxies.4.0" />
+    <Reference Include="ICSharpCode.Decompiler" />
+    <Reference Include="Mono.Cecil" />
+    <Reference Include="JSIL.Tests" />
+  </References>
+  <Files>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="SimpleTestCases\Issue538.cs" />
@@ -433,35 +381,5 @@
     <None Include="SimpleTestCases\Issue579.cs" />
     <None Include="SimpleTestCases\Unbox_Issue569.il" />
     <None Include="SimpleTestCases\Unbox_Issue569_Complex.il" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\JSIL\JSIL.csproj">
-      <Project>{DA03D241-B70C-44D7-A465-3CEB5A9416AE}</Project>
-      <Name>JSIL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Meta\Meta.csproj">
-      <Project>{37C67C73-1F58-49B8-A39E-768AC88C2447}</Project>
-      <Name>Meta</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Proxies\Proxies.4.0.csproj">
-      <Project>{12DBCC9A-50FE-43B1-BAD1-8029D4AD60C9}</Project>
-      <Name>Proxies.4.0</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Upstream\ILSpy\ICSharpCode.Decompiler\ICSharpCode.Decompiler.csproj">
-      <Project>{984CC812-9470-4A13-AFF9-CC44068D666C}</Project>
-      <Name>ICSharpCode.Decompiler</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Upstream\ILSpy\Mono.Cecil\Mono.Cecil.csproj">
-      <Project>{D68133BD-1E63-496E-9EDE-4FBDBF77B486}</Project>
-      <Name>Mono.Cecil</Name>
-    </ProjectReference>
-    <ProjectReference Include="Tests.csproj">
-      <Project>{2DBBCB24-54AD-4C66-B7D6-911811CEB185}</Project>
-      <Name>Tests</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <Import Project="..\.NET 4.5.targets" />
+  </Files>
 </Project>

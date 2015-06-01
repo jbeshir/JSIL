@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ExternalProject Name="JSIL.ExpressionInterpreter">
+
+  <Project
+    Name="JSIL.ExpressionInterpreter"
+    Guid="B6269EA3-19B6-4684-AD1F-03562FD4AC55"
+    Path="Upstream/JSIL.ExpressionInterpreter/JSIL.ExpressionInterpreter.csproj" />
+  
+</ExternalProject>

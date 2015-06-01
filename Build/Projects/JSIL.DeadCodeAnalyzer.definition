@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="JSIL.DeadCodeAnalyzer" Path="Compiler/Analyzers/DeadCodeAnalyzer" Type="Library">
+  <References>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Compiler" />
+    <Reference Include="JSIL" />
+    <Reference Include="ICSharpCode.Decompiler" />
+    <Reference Include="ICSharpCode.NRefactory" />
+    <Reference Include="Mono.Cecil" />
+  </References>
+  <Files>
+    <Compile Include="Annotations.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="DeadCodeInfoProvider.cs" />
+    <Compile Include="TypeMapStep.cs" />
+    <Compile Include="DeadCodeAnalyzer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </Files>
+</Project>
