@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Name="JSIL.Proxies.XNA4" Path="Proxies/XNA4" Type="Library">
+<Project Name="JSIL.Proxies.XNA4" Path="Proxies/XNA4" Type="Library" Platforms="Windows">
   <References>
     <Reference Include="Microsoft.Xna.Framework" />
     <Reference Include="Microsoft.Xna.Framework.Game" />

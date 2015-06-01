@@ -114,3 +114,10 @@ pingme.txt
 /Upstream/JSIL.ExpressionInterpreter/
 /Upstream/gamepad.js/
 /Upstream/structs.js/
+*.Linux.csproj
+*.Linux.sln
+*.MacOS.csproj
+*.MacOS.sln
+*.Windows.csproj
+*.Windows.sln
+*.speccache
