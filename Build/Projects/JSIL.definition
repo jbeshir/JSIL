@@ -105,9 +105,9 @@
     <None Include="..\Libraries\JSIL.IO.js">
       <Link>JS Libraries\JSIL.IO.js</Link>
     </None>
-    <Content Include="..\Libraries\JSIL.XNACore.js">
+    <None Include="..\Libraries\JSIL.XNACore.js">
       <Link>JS Libraries\JSIL.XNACore.js</Link>
-    </Content>
+    </None>
     <Content Include="jsil.ico" />
   </Files>
 </Project>
