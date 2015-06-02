@@ -1,0 +1,23 @@
+# Use the auto-packager to get most of it.
+autopackage
+
+# Include additional external project definitions for external projects
+include ^Build/Publish/(.*)\.definition$
+rewrite ^Build/Publish/(.*)\.definition$ Build/Projects/$1.definition
+
+# Include binaries from external projects
+include ^Upstream/ILSpy/ICSharpCode\.Decompiler/bin/Debug/ICSharpCode\.Decompiler\.(dll|dll\.mdb|pdb)$
+rewrite ^Upstream/ILSpy/ICSharpCode\.Decompiler/bin/Debug/ICSharpCode\.Decompiler\.(dll|dll\.mdb|pdb)$ Externals/ICSharpCode.Decompiler.$1
+include ^Upstream/ILSpy/NRefactory/bin/Debug/ICSharpCode\.NRefactory\.(dll|dll\.mdb|pdb|xml)$
+rewrite ^Upstream/ILSpy/NRefactory/bin/Debug/ICSharpCode\.NRefactory\.(dll|dll\.mdb|pdb|xml)$ Externals/ICSharpCode.NRefactory.$1 
+include ^Upstream/ILSpy/NRefactory/bin/Debug/ICSharpCode\.NRefactory\.CSharp\.(dll|dll\.mdb|pdb|xml)$
+rewrite ^Upstream/ILSpy/NRefactory/bin/Debug/ICSharpCode\.NRefactory\.CSharp\.(dll|dll\.mdb|pdb|xml)$ Externals/ICSharpCode.NRefactory.CSharp.$1 
+include ^Upstream/ILSpy/Mono\.Cecil/bin/net_4_0_Debug/Mono\.Cecil\.(dll|dll\.mdb|pdb|xml)$
+rewrite ^Upstream/ILSpy/Mono\.Cecil/bin/net_4_0_Debug/Mono\.Cecil\.(dll|dll\.mdb|pdb|xml)$ Externals/Mono.Cecil.$1
+include ^Upstream/ILSpy/Mono\.Cecil/bin/net_4_0_Debug/Mono\.Cecil\.Mdb\.(dll|dll\.mdb|pdb|xml)$
+rewrite ^Upstream/ILSpy/Mono\.Cecil/bin/net_4_0_Debug/Mono\.Cecil\.Mdb\.(dll|dll\.mdb|pdb|xml)$ Externals/Mono.Cecil.Mdb.$1
+include ^Upstream/ILSpy/Mono\.Cecil/bin/net_4_0_Debug/Mono\.Cecil\.Pdb\.(dll|dll\.mdb|pdb|xml)$
+rewrite ^Upstream/ILSpy/Mono\.Cecil/bin/net_4_0_Debug/Mono\.Cecil\.Pdb\.(dll|dll\.mdb|pdb|xml)$ Externals/Mono.Cecil.Pdb.$1
+include ^bin/JSIL.ExpressionInterpreter.(dll|dll.jsilconfig|dll.mdb)$
+rewrite ^bin/JSIL.ExpressionInterpreter.(dll|dll.jsilconfig|dll.mdb)$ Externals/JSIL.ExpressionInterpreter.$1
+
