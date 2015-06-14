@@ -20,9 +20,9 @@
       "JSIL\\.Meta,"
     ]
   },
+  "ProxyWarnings": false,
   "ProfileSettings": {
     "OverwriteExistingContent": true,
     "ContentOutputDirectory": "%outputdirectory%/Content"
-  },
-  "ProxyWarnings": false
+  }
 }
