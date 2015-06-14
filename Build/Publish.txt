@@ -21,3 +21,6 @@ rewrite ^Upstream/ILSpy/Mono\.Cecil/bin/net_4_0_Debug/Mono\.Cecil\.Pdb\.(dll|dll
 include ^bin/JSIL.ExpressionInterpreter.(dll|dll.jsilconfig|dll.mdb)$
 rewrite ^bin/JSIL.ExpressionInterpreter.(dll|dll.jsilconfig|dll.mdb)$ Externals/JSIL.ExpressionInterpreter.$1
 
+# Include Javascript runtime libraries
+include ^Libraries/(.*)$
+rewrite ^Libraries/(.*)$ JSIL.Compiler/AnyCPU/Libraries/$1 
