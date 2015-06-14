@@ -11,6 +11,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.Build.Windows" />
     <Reference Include="JSIL" />
+    <Reference Include="JSIL.Proxies.4.0" />
     <Reference Include="Mono.Cecil" />
   </References>
   <Properties>
