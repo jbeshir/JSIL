@@ -124,3 +124,5 @@ pingme.txt
 bin/
 obj/
 *.userprefs
+desktop.ini
+/httpd
