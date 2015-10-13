@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModuleInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Path>/home/june/Projects/JSIL</Path>
+  <Name>JSIL</Name>
+  <DefaultAction>resync</DefaultAction>
+  <GenerateNuGetRepositories>true</GenerateNuGetRepositories>
+  <DisableSynchronisation xsi:nil="true" />
+  <ModuleAssemblies />
+  <Packages>
+    <PackageRef>
+      <Uri>https-git://github.com/kg/gamepad.js</Uri>
+      <GitRef>master</GitRef>
+      <Folder>Upstream/gamepad.js</Folder>
+    </PackageRef>
+    <PackageRef>
+      <Uri>https-git://github.com/kg/ILSpy</Uri>
+      <GitRef>master</GitRef>
+      <Folder>Upstream/ILSpy</Folder>
+    </PackageRef>
+    <PackageRef>
+      <Uri>https-git://github.com/ttocs7/tetris</Uri>
+      <GitRef>master</GitRef>
+      <Folder>Examples/ThirdParty/Tetris</Folder>
+    </PackageRef>
+    <PackageRef>
+      <Uri>https-git://github.com/dherman/structs.js</Uri>
+      <GitRef>master</GitRef>
+      <Folder>Upstream/structs.js</Folder>
+    </PackageRef>
+    <PackageRef>
+      <Uri>https-git://github.com/iskiselev/JSIL.ExpressionInterpreter</Uri>
+      <GitRef>master</GitRef>
+      <Folder>Upstream/JSIL.ExpressionInterpreter</Folder>
+    </PackageRef>
+  </Packages>
+</ModuleInfo>

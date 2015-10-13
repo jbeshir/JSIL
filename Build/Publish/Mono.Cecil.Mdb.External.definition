@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ExternalProject Name="Mono.Cecil.Mdb.External">
+
+  <Binary
+    Name="Mono.Cecil.Mdb.External"
+    Path="Externals/Mono.Cecil.Mdb.dll" />
+  
+</ExternalProject>

@@ -1,75 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2DBBCB24-54AD-4C66-B7D6-911811CEB186}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JSIL.SimpleTests</RootNamespace>
-    <AssemblyName>SimpleTests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <OutputPath>..\bin\</OutputPath>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
-    <RestorePackages>true</RestorePackages>
-    <TargetFrameworkProfile />
-    <LangVersion>5</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <DebugSymbols>true</DebugSymbols>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="FSharp.Compiler.CodeDom, Version=0.9.3.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\FSharp.Compiler.CodeDom.0.9.3.0\lib\net40\FSharp.Compiler.CodeDom.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="JSIL.SimpleTests" Path="Tests" Type="Library">
+  <References>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
+    <Reference Include="nunit.framework" />
+    <Reference Include="JSIL" />
+    <Reference Include="JSIL.Meta" />
+    <Reference Include="JSIL.Proxies.4.0" />
+    <Reference Include="ICSharpCode.Decompiler" />
+    <Reference Include="Mono.Cecil" />
+    <Reference Include="JSIL.Tests" />
+  </References>
+  <Files>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="SimpleTestCases\Issue538.cs" />
     <None Include="SimpleTestCases\Issue567.cs" />
+    <None Include="SimpleTestCasesForTranslatedBcl\Issue585.cs" />
     <None Include="SimpleTestCasesForStubbedBcl\Issue585.cs" />
-    <None Include="SimpleTestCases\FailsOnMonoWhenStubbed\ConvertEnum.cs" />
+    <None Include="SimpleTestCases\ConvertEnum.cs" />
     <None Include="SimpleTestCases\DelegateBaseType_Issue449.cs" />
     <None Include="SimpleTestCases\DelegateInvoke_Issue500.cs" />
     <None Include="SimpleTestCases\DelegateInvoke_Issue543.cs" />
@@ -98,35 +51,13 @@
     <None Include="SimpleTestCases\RefIntIncrement_Issue684.cs" />
     <None Include="SimpleTestCases\EscapeArgumentsVarName.cs" />
     <None Include="SimpleTestCases\ReflectionGenericMethodInvoke.cs" />
-    <None Include="Bootstappers\BclBootstrap.cs" />
+    <Compile Include="ExpressionTests.cs" />
     <None Include="SimpleTestCases\StringEscape_Issue687.cs" />
     <None Include="SimpleTestCases\Issue672_2.cs" />
     <None Include="SimpleTestCases\Issue705.cs" />
     <None Include="SimpleTestCasesForStubbedBcl\DelegateComplexTest_Issue624.cs" />
     <None Include="SimpleTestCases\Queue.cs" />
-    <None Include="SimpleTestCases\FailsOnMono\UriBasic.cs" />
-    <None Include="SimpleTestCases\NumericRoundTripCasts.cs" />
-    <None Include="SimpleTestCases\ObjectVirtualMethods.cs" />
-    <None Include="SimpleTestCases\RawTypeIsObject_Issue754.cs" />
-    <None Include="SimpleTestCases\HashSetSameHash_Issue752.cs" />
-    <None Include="SimpleTestCases\ArrayClearGeneric.cs" />
-    <Compile Include="SimpleTestCasesForStubbedBcl.cs" />
-    <Compile Include="SimpleTestCasesForTranslatedBcl.cs" />
-    <None Include="SimpleTestCases\Int64ZeroComparion_Issue808.cs" />
-    <None Include="SimpleTestCases\DelegateOverload_Issue806.cs" />
-    <None Include="SimpleTestCases\NullableByRef_Issue810.cs" />
-    <None Include="SimpleTestCases\ListConstructor.cs" />
-    <None Include="SimpleTestCases\ListICollection.cs" />
-    <None Include="SimpleTestCases\NumericTypesBase_Issue812.cs" />
-    <None Include="SimpleTestCases\Issue789.cs" />
-    <None Include="SimpleTestCases\Issue827.cs" />
-    <None Include="SimpleTestCases\Issue802.cs" />
-    <None Include="SimpleTestCases\Issue800.cs" />
-    <None Include="SimpleTestCases\Issue710.cs" />
-    <None Include="SimpleTestCasesForStubbedBcl\Issue721.cs" />
-    <None Include="SimpleTestCases\Issue325.cs" />
-    <None Include="SimpleTestCases\Issue743.cs" />
-    <None Include="SimpleTestCases\UInt64_Issue855.cs" />
+    <None Include="SimpleTestCases\UriBasic.cs" />
     <Compile Include="SimpleTests.cs" />
     <None Include="SimpleTestCases\BaseAutoProperties.cs" />
     <None Include="SimpleTestCases\OverloadedVirtualMethods.cs" />
@@ -138,7 +69,7 @@
     <None Include="SimpleTestCases\ListGetEnumerator.cs" />
     <None Include="SimpleTestCases\EnumerateStringAsChars.cs" />
     <None Include="SimpleTestCases\Issue194.cs" />
-    <None Include="SimpleTestCases\FailsOnMono\AssignNewToOut.cs" />
+    <None Include="SimpleTestCases\AssignNewToOut.cs" />
     <None Include="SimpleTestCases\ListForEach.cs" />
     <None Include="SimpleTestCases\EnumerableWhere.cs" />
     <None Include="SimpleTestCases\EnumerableRange.cs" />
@@ -157,7 +88,7 @@
     <None Include="SimpleTestCases\InterfaceBaseType.cs" />
     <None Include="SimpleTestCases\ArrayCopyEnum.cs" />
     <None Include="SimpleTestCases\StringGetHashCode.cs" />
-    <None Include="SimpleTestCases\FailsOnMonoWhenStubbed\EnumIConvertible.cs" />
+    <None Include="SimpleTestCases\EnumIConvertible.cs" />
     <None Include="SimpleTestCases\GetEntryAssembly.cs" />
     <None Include="SimpleTestCases\CastEnumTypeToRuntimeType.cs" />
     <None Include="SimpleTestCases\CastIntegerConstantToEnum.cs" />
@@ -213,7 +144,7 @@
     <None Include="SimpleTestCases\Issue453.cs" />
     <None Include="SimpleTestCases\Issue372.cs" />
     <None Include="SimpleTestCases\Issue425.cs" />
-    <None Include="SimpleTestCases\FailsOnMono\Issue445.cs" />
+    <None Include="SimpleTestCases\Issue445.cs" />
     <None Include="SimpleTestCases\Issue410.cs" />
     <None Include="SimpleTestCases\Issue411.cs" />
     <None Include="SimpleTestCases\Issue459.cs" />
@@ -235,8 +166,10 @@
     <None Include="SimpleTestCases\Int32CompareExchange.cs" />
     <None Include="SimpleTestCases\StringSplit.cs" />
     <None Include="SimpleTestCases\StringIsNullOrEmpty.cs" />
+    <None Include="SimpleTestCases\ListConstructor.cs" />
     <None Include="SimpleTestCases\Array2D.cs" />
     <None Include="SimpleTestCases\ListToArray.cs" />
+    <None Include="SimpleTestCases\ListICollection.cs" />
     <None Include="SimpleTestCases\ListContains.cs" />
     <None Include="SimpleTestCases\ListIndexOf.cs" />
     <None Include="SimpleTestCases\ListInsert.cs" />
@@ -263,7 +196,7 @@
     <None Include="SimpleTestCases\StringFormatCustomPlacesDecimal.cs" />
     <None Include="SimpleTestCases\StringFormatQuotedString.cs" />
     <None Include="SimpleTestCases\StringFormatPlaceSeparators.cs" />
-    <None Include="SimpleTestCases\FailsOnMono\IntegerToStringFormatted.cs" />
+    <None Include="SimpleTestCases\IntegerToStringFormatted.cs" />
     <None Include="SimpleTestCases\JaggedArrayReference.cs" />
     <None Include="SimpleTestCases\JaggedStructArrayReference.cs" />
     <None Include="SimpleTestCases\IfReferenceBool.cs" />
@@ -308,7 +241,7 @@
     <None Include="SimpleTestCases\SmallUnsignedIntOverflowAndUnderflow.cs" />
     <None Include="SimpleTestCases\Int32Multiply.cs" />
     <None Include="SimpleTestCases\CompoundAssignmentWithCustomOperator.cs" />
-    <None Include="SimpleTestCases\FailsOnMono\CheckedIntegerArithmetic.cs" />
+    <None Include="SimpleTestCases\CheckedIntegerArithmetic.cs" />
     <None Include="SimpleTestCases\StringFormatCustomPlacesNegative.cs" />
     <None Include="SimpleTestCases\GenericCreateInstance.cs" />
     <None Include="SimpleTestCases\GenericSelfConstraint.cs" />
@@ -448,38 +381,5 @@
     <None Include="SimpleTestCases\Issue579.cs" />
     <None Include="SimpleTestCases\Unbox_Issue569.il" />
     <None Include="SimpleTestCases\Unbox_Issue569_Complex.il" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\JSIL\JSIL.csproj">
-      <Project>{DA03D241-B70C-44D7-A465-3CEB5A9416AE}</Project>
-      <Name>JSIL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Meta\Meta.csproj">
-      <Project>{37C67C73-1F58-49B8-A39E-768AC88C2447}</Project>
-      <Name>Meta</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Proxies\Proxies.4.0.csproj">
-      <Project>{12DBCC9A-50FE-43B1-BAD1-8029D4AD60C9}</Project>
-      <Name>Proxies.4.0</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Upstream\ILSpy\ICSharpCode.Decompiler\ICSharpCode.Decompiler.csproj">
-      <Project>{984CC812-9470-4A13-AFF9-CC44068D666C}</Project>
-      <Name>ICSharpCode.Decompiler</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Upstream\ILSpy\Mono.Cecil\Mono.Cecil.csproj">
-      <Project>{D68133BD-1E63-496E-9EDE-4FBDBF77B486}</Project>
-      <Name>Mono.Cecil</Name>
-    </ProjectReference>
-    <ProjectReference Include="Tests.csproj">
-      <Project>{2DBBCB24-54AD-4C66-B7D6-911811CEB185}</Project>
-      <Name>Tests</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TranslatedBcl\" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  </Files>
 </Project>

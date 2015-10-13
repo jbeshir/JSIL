@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ExternalProject Name="Mono.Cecil">
+
+  <Project
+    Name="Mono.Cecil"
+    Guid="D68133BD-1E63-496E-9EDE-4FBDBF77B486"
+    Path="Upstream/ILSpy/Mono.Cecil/Mono.Cecil.csproj">
+    <ConfigurationMapping Old="Debug" New="net_4_0_Debug|Any CPU" />
+    <ConfigurationMapping Old="Release" New="net_4_0_Release|Any CPU" />
+  </Project>
+  <Project
+    Name="Mono.Cecil.Mdb"
+    Guid="8559DD7F-A16F-46D0-A05A-9139FAEBA8FD"
+    Path="Upstream/ILSpy/Mono.Cecil/symbols/mdb/Mono.Cecil.Mdb.csproj">
+    <ConfigurationMapping Old="Debug" New="net_4_0_Debug|Any CPU" />
+    <ConfigurationMapping Old="Release" New="net_4_0_Release|Any CPU" />
+  </Project>
+  <Project
+    Name="Mono.Cecil.Pdb"
+    Guid="63E6915C-7EA4-4D76-AB28-0D7191EEA626"
+    Path="Upstream/ILSpy/Mono.Cecil/symbols/pdb/Mono.Cecil.Pdb.csproj">
+    <ConfigurationMapping Old="Debug" New="net_4_0_Debug|Any CPU" />
+    <ConfigurationMapping Old="Release" New="net_4_0_Release|Any CPU" />
+  </Project>
+  
+</ExternalProject>

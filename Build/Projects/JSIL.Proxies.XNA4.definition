@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="JSIL.Proxies.XNA4" Path="Proxies/XNA4" Type="Library" Platforms="Windows">
+  <References>
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Microsoft.Xna.Framework.Game" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="JSIL.Meta" />
+  </References>
+  <Properties>
+    <Property Name="RootNamespace" Value="JSIL.Proxies.XNA" />
+  </Properties>
+  <Files>
+    <Compile Include="..\XNACommon\Primitives.cs" />
+    <Compile Include="..\XNACommon\UnsafeNativeMethods.cs" />
+    <Compile Include="..\XNACommon\Content.cs" />
+    <Compile Include="..\XNACommon\Game.cs" />
+    <Compile Include="..\XNACommon\SpriteFont.cs" />
+    <Compile Include="Buffers.cs" />
+    <Compile Include="SpriteBatch.cs" />
+    <Compile Include="GraphicsDevice.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Texture2D.cs" />
+  </Files>
+</Project>

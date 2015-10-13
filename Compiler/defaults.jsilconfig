@@ -1,9 +1,8 @@
 ﻿{
   "OutputDirectory": "%currentdirectory%",
-  "ProxyWarnings": false,
   "Assemblies": {
     "Stubbed": [
-      "^mscorlib,",
+      "mscorlib,",
       "^System,",
       "^System\\.(.+),",
       "^Microsoft\\.(.+),",
@@ -21,6 +20,7 @@
       "JSIL\\.Meta,"
     ]
   },
+  "ProxyWarnings": false,
   "ProfileSettings": {
     "OverwriteExistingContent": true,
     "ContentOutputDirectory": "%outputdirectory%/Content"

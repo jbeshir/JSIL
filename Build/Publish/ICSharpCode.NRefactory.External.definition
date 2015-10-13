@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ExternalProject Name="ICSharpCode.NRefactory.External">
+
+  <Binary
+    Name="ICSharpCode.NRefactory"
+    Path="Externals/ICSharpCode.NRefactory.dll" />
+  
+</ExternalProject>

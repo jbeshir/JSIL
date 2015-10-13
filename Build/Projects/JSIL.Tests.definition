@@ -1,85 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2DBBCB24-54AD-4C66-B7D6-911811CEB185}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JSIL.Tests</RootNamespace>
-    <AssemblyName>Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <OutputPath>..\bin\</OutputPath>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
-    <RestorePackages>true</RestorePackages>
-    <TargetFrameworkProfile />
-    <LangVersion>5</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <DebugSymbols>true</DebugSymbols>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <ErrorReport>prompt</ErrorReport>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="FSharp.Compiler.CodeDom, Version=0.9.3.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <HintPath>..\packages\FSharp.Compiler.CodeDom.0.9.3.0\lib\net40\FSharp.Compiler.CodeDom.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nunit.core, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="nunit.core.interfaces, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.interfaces.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nunit.util, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.util.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="NUnit.VisualStudio.TestAdapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
+<?xml version="1.0" encoding="utf-8"?>
+<Project Name="JSIL.Tests" Path="Tests" Type="Library">
+  <References>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
+    <Reference Include="nunit.framework" />
+    <Reference Include="JSIL" />
+    <Reference Include="JSIL.Meta" />
+    <Reference Include="JSIL.Proxies.4.0" />
+    <Reference Include="ICSharpCode.Decompiler" />
+    <Reference Include="Mono.Cecil" />
+  </References>
+  <Files>
     <None Include="AnalysisTestCases\ReturnStructArgument.cs" />
     <None Include="AnalysisTestCases\PureStructOperator.cs" />
     <None Include="AnalysisTestCases\FieldAssignmentDetection.cs" />
@@ -160,7 +95,6 @@
     <None Include="AnalysisTestCases\FNABaseOffset.cs" />
     <None Include="EmscriptenTestCases\OutUnionParameter.cs" />
     <None Include="EmscriptenTestCases\OutComplexUnionParameter.cs" />
-    <None Include="EmscriptenTestCases\ReturnEnum.cs" />
     <Compile Include="EmscriptenTestCases\ProxiedExternFunction.cs" />
     <None Include="EmscriptenTestCases\IntPtrZeroEquality.cs" />
     <None Include="EmscriptenTestCases\StringArrayParameter.cs" />
@@ -173,7 +107,6 @@
     <Compile Include="ComparisonTests.cs" />
     <None Include="FailingTestCases\BaseFields.cs" />
     <Compile Include="AnalysisTests.cs" />
-    <None Include="packages.config" />
     <None Include="ReflectionTestCases\ListPublicStaticMethods.cs" />
     <None Include="ReflectionTestCases\ListOverloadedPublicStaticMethods.cs" />
     <None Include="ReflectionTestCases\Common.cs" />
@@ -269,12 +202,12 @@
     <None Include="ReflectionTestCases\GetInterfaceAttributes.cs" />
     <None Include="ReflectionTestCases\GetParameterAttributes.cs" />
     <None Include="ReflectionTestCases\GetConstructorAttributes.cs" />
-    <None Include="SpecialTestCases\JSReplacementTypeOfThisStatic.cs" />
-    <None Include="BinaryTestCases\RoslynUnaryPointerOperation.exe" />
-    <None Include="EmscriptenTestCases\exclude_common\common.cpp" />
+    <None Include="SpecialTestCases\JSReplacementTypeofThisStatic.cs" />
+    <None Include="EmscriptenTestCases\common\common.cpp" />
     <Content Include="JSTestCases\SameNameDifferentReturnTypes.js" />
     <Content Include="JSTestCases\SameNameWithOverride.js" />
     <None Include="AnalysisTestCases\Issue395.cs" />
+    <None Include="FailingTestCases\ReflectionTypeGenericInfo13.cs" />
     <None Include="Int64TestCases\Int64ToString.cs" />
     <None Include="PerformanceTestCases\EnumCasts.cs" />
     <None Include="SpecialTestCases\DoubleFloatCasts.cs" />
@@ -286,11 +219,7 @@
     <None Include="SpecialTestCases\TranslateTypeInStubbedAssembly.cs" />
     <None Include="SpecialTestCases\TranslateMethodInStubbedAssembly.cs" />
     <None Include="SpecialTestCases\TranslateMethodInStubbedType.cs" />
-    <None Include="FailingTestCases\DelegateMethod_ResolveInterface_Issue604.cs" />
-    <None Include="PerformanceTestCases\GenericMethodCalls.cs" />
-    <None Include="ReflectionTestCases\GetInheritedAttributesFromMethods.cs" />
-    <None Include="SpecialTestCases\RenameInterfaceMethod.cs" />
-    <None Include="SpecialTestCases\RenameInterface.cs" />
+    <None Include="FailingTestCases\DelegateMethod_Issue604.cs" />
     <Compile Include="TypeInformationTests.cs" />
     <None Include="TestCases\LongArithmetic.cs" />
     <None Include="InterfaceTestCases\NestedInterfaces.cs" />
@@ -419,16 +348,16 @@
     <None Include="UnsafeTestCases\StackAlloc.cs" />
     <None Include="UnsafeTestCases\PointerOrdering.cs" />
     <None Include="UnsafeTestCases\PointerRefCast.cs" />
-    <None Include="UnsafeTestCases\ZeroLengthIntArray.cs" />
     <None Include="FailingTestCases\PassPackedArrayAsNormalArrayArgument.cs" />
     <None Include="FailingTestCases\PassNormalArrayAsPackedArrayArgument.cs" />
     <None Include="FailingTestCases\ReturnNormalArrayAsPackedArray.cs" />
     <None Include="FailingTestCases\ReturnPackedArrayAsNormalArray.cs" />
     <Compile Include="GenericTestFixture.cs" />
+    <None Include="PerformanceTestCases\PointerMethodsAreSingletons.cs" />
     <Compile Include="PerformanceAnalysis.cs" />
     <None Include="PerformanceTestCases\Vector3.cs" />
     <None Include="PerformanceTestCases\OverloadedMethodCalls.cs" />
-    <None Include="PerformanceTestCases\OverloadedConstructorsPerfomance.cs" />
+    <None Include="PerformanceTestCases\OverloadedConstructors.cs" />
     <None Include="PerformanceTestCases\UncachedOverloadedMethodCalls.cs" />
     <Compile Include="PerformanceTests.cs" />
     <None Include="TestCases\GenericStaticMethods2.cs" />
@@ -460,9 +389,6 @@
     <None Include="UnsafeTestCases\CustomFieldOffset.cs" />
     <None Include="UnsafeTestCases\CustomFieldOffsetUnion.cs" />
     <None Include="UnsafeTestCases\UnionContainingEnum.cs" />
-    <None Include="UnsafeTestCases\SDLTouchStructLayout.cs" />
-    <None Include="UnsafeTestCases\ReadInt64InStruct.cs" />
-    <None Include="UnsafeTestCases\WriteUInt64InStruct.cs" />
     <Compile Include="XMLTests.cs" />
     <Compile Include="DependencyTests.cs" />
     <None Include="TestCases\GenericParameterNameShadowing.cs" />
@@ -497,14 +423,14 @@
     <None Include="SpecialTestCases\IgnoreUnsafeCode.cs" />
     <None Include="TestCases\Enums.cs" />
     <None Include="SpecialTestCases\ChainedElseIf.cs" />
-    <None Include="InterfaceTestCases\FailsOnMono\Interfaces.cs" />
+    <None Include="InterfaceTestCases\Interfaces.cs" />
     <None Include="InterfaceTestCases\InterfaceInheritance.cs" />
     <None Include="TestCases\Lambdas.cs" />
     <None Include="TestCases\ForEach.cs" />
     <None Include="TestCases\YieldReturn.cs" />
     <None Include="TestCases\StructAssignment.cs" />
     <None Include="TestCases\ReturnStruct.cs" />
-    <None Include="TestCases\FailsOnMono\RefStruct.cs" />
+    <None Include="TestCases\RefStruct.cs" />
     <None Include="TestCases\IntegerArithmetic.cs" />
     <None Include="TestCases\DynamicStaticOverloadedMethods.cs" />
     <None Include="TestCases\DynamicReturnTypes.cs" />
@@ -620,13 +546,13 @@
     <None Include="TestCases\DelegateResultWithConstraints.cs" />
     <None Include="TestCases\GenericNestedTypeConstructedInParentStaticConstructor.cs" />
     <None Include="BinaryTestCases\DynamicComplex.exe" />
-    <None Include="TestCases\FailsOnMono\Events.vb" />
+    <None Include="TestCases\Events.vb" />
     <None Include="TestCases\GenericMethodThisReference.cs" />
     <None Include="TestCases\StringEmpty.cs" />
-    <None Include="TestCases\FailsOnMono\GetTypeByName.cs" />
+    <None Include="TestCases\GetTypeByName.cs" />
     <None Include="TestCases\OverloadWithMultipleGenericThis.cs" />
     <None Include="TestCases\OverloadWithMultipleGenericThisRecursive.cs" />
-    <None Include="TestCases\FailsOnMono\GetGenericTypeByName.cs" />
+    <None Include="TestCases\GetGenericTypeByName.cs" />
     <None Include="TestCases\InheritOpenGenericClassMultipleTimes.cs" />
     <None Include="TestCases\InheritStructFields.cs" />
     <None Include="TestCases\EnumBooleanLogic.cs" />
@@ -676,41 +602,9 @@
     <None Include="SpecialTestCases\InnerClassNameFormatting_Issue352.cs" />
     <None Include="TestCases\DictionaryInterfaces.cs" />
     <None Include="SpecialTestCases\PreventFastMethodDispatcherIfHideBase_Issue368.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\JSIL\JSIL.csproj">
-      <Project>{DA03D241-B70C-44D7-A465-3CEB5A9416AE}</Project>
-      <Name>JSIL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Meta\Meta.csproj">
-      <Project>{37C67C73-1F58-49B8-A39E-768AC88C2447}</Project>
-      <Name>Meta</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Proxies\Proxies.4.0.csproj">
-      <Project>{12DBCC9A-50FE-43B1-BAD1-8029D4AD60C9}</Project>
-      <Name>Proxies.4.0</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Upstream\ILSpy\ICSharpCode.Decompiler\ICSharpCode.Decompiler.csproj">
-      <Project>{984CC812-9470-4A13-AFF9-CC44068D666C}</Project>
-      <Name>ICSharpCode.Decompiler</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Upstream\ILSpy\Mono.Cecil\Mono.Cecil.csproj">
-      <Project>{D68133BD-1E63-496E-9EDE-4FBDBF77B486}</Project>
-      <Name>Mono.Cecil</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="BinaryTestCases\ConsoleApplication8.exe" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="BinaryTestCases\MonoPinArray.exe" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="BinaryTestCases\InheritedAndExplicitOverwrittenMethods.dll" />
     <Content Include="BinaryTestCases\InheritedInterfacesExplicit.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  </Files>
 </Project>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ExternalProject Name="XapParse">
+
+  <Project
+    Name="XapParse"
+    Guid="10D0D83E-59A8-421C-9C83-3108074B1A9C"
+    Path="Upstream/xapparse/XapParse.csproj">
+    <ConfigurationMapping Old="Debug" New="Debug|x86" />
+    <ConfigurationMapping Old="Release" New="Release|x86" />
+  </Project>
+  
+</ExternalProject>
