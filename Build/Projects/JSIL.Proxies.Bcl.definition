@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Name="JSIL.Proxies.Bcl" Path="Proxies/BCL" Type="Library">
   <References>
     <Reference Include="System" />

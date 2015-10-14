@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Name="JSIL.Compiler" Path="Compiler" Type="App">
   <References>
     <Reference Include="System" />
@@ -21,22 +21,38 @@
       <Platform Name="MacOS">TRACE;OSX</Platform>
       <Platform Name="Linux">TRACE;UNIX</Platform>
     </CustomDefinitions>
+    <FrameworkVersions>
+      <Platform Name="Android">
+        <Version>v4.4</Version>
+      </Platform>
+      <Platform Name="Linux">
+        <Version>v4.5</Version>
+      </Platform>
+      <Platform Name="MacOS">
+        <Version>v4.5</Version>
+      </Platform>
+      <Platform Name="Web">
+        <Version>v4.5</Version>
+      </Platform>
+      <Platform Name="Windows">
+        <Version>v4.5</Version>
+      </Platform>
+    </FrameworkVersions>
   </Properties>
   <Files>
     <Compile Include="..\Upstream\Options.cs" />
     <Compile Include="BuildGroup.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="Extensibility\ICompilerExtension.cs" />
-    <Compile Include="Extensibility\IAnalyzer.cs" />
+    <Compile Include="Extensibility\IProfile.cs" />
     <Compile Include="Profiles\Base.cs" />
     <Compile Include="Profiles\ContentManifestWriter.cs" />
     <Compile Include="Profiles\CopiedOutputGatherer.cs" />
     <Compile Include="Profiles\Default.cs" />
-    <Compile Include="Extensibility\IProfile.cs" />
     <Compile Include="Profiles\ResourceConverter.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="SolutionBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SolutionBuilder.cs" />
     <Compile Include="VariableSet.cs" />
     <Content Include="jsil.ico" />
     <None Include="app.config">

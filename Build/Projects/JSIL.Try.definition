@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Name="JSIL.Try" Path="Try" Type="Library">
   <References>
     <Reference Include="System" />
@@ -9,8 +9,27 @@
     <Reference Include="JSIL.Proxies.4.0" />
     <Reference Include="Mono.Cecil" />
   </References>
+  <Properties>
+    <FrameworkVersions>
+      <Platform Name="Android">
+        <Version>v4.4</Version>
+      </Platform>
+      <Platform Name="Linux">
+        <Version>v4.5</Version>
+      </Platform>
+      <Platform Name="MacOS">
+        <Version>v4.5</Version>
+      </Platform>
+      <Platform Name="Web">
+        <Version>v4.5</Version>
+      </Platform>
+      <Platform Name="Windows">
+        <Version>v4.5</Version>
+      </Platform>
+    </FrameworkVersions>
+  </Properties>
   <Files>
-    <Compile Include="SnippetCompiler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SnippetCompiler.cs" />
   </Files>
 </Project>
