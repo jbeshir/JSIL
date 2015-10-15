@@ -24,3 +24,8 @@ rewrite ^bin/JSIL.ExpressionInterpreter.(dll|dll.jsilconfig|dll.mdb)$ Externals/
 # Include Javascript runtime libraries
 include ^Libraries/(.*)$
 rewrite ^Libraries/(.*)$ JSIL.Compiler/AnyCPU/Libraries/$1 
+
+# Put analyzer, profile, and proxy assemblies in the compiler's directory, where it looks for them.
+rewrite ^JSIL\.DeadCodeAnalyzer/AnyCPU/(.*)$ JSIL.Compiler/AnyCPU/$1
+rewrite ^JSIL\.Proxies\.[^/]*/AnyCPU/(.*)$ JSIL.Compiler/AnyCPU/$1
+rewrite ^JSIL\.Profiles\.[^/]*/AnyCPU/(.*)$ JSIL.Compiler/AnyCPU/$1
