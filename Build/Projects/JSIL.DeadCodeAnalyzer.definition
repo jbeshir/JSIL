@@ -15,6 +15,7 @@
     <Reference Include="Mono.Cecil" />
   </References>
   <Properties>
+    <Property Name="AssemblyName" Value="JSIL.Analysis.DCE" />
     <FrameworkVersions>
       <Platform Name="Android">
         <Version>v4.4</Version>
